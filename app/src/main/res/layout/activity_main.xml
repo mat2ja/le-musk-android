@@ -10,7 +10,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/vehicles_recycller_view"
+        android:id="@+id/vehicles_recycler_view"
         android:layout_width="409dp"
         android:layout_height="681dp"
         app:layout_constraintBottom_toBottomOf="parent"

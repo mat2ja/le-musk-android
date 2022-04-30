@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-class VehicleObject(
+class Vehicle(
     var name: String,
     val year: Int,
     val price: Double,

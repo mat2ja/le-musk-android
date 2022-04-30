@@ -5,7 +5,6 @@ import android.content.IntentFilter
 import android.os.Bundle
 import android.tvz.hr.listaosrecki.broadcast.LowBatteryReceiver
 import android.tvz.hr.listaosrecki.databinding.ActivityMainBinding
-import android.tvz.hr.listaosrecki.parceable.VehicleObject
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -35,10 +34,10 @@ class MainActivity : AppCompatActivity() {
 
             layoutManager = LinearLayoutManager(applicationContext)
 
-            vehiclesRecycllerView.layoutManager = layoutManager
+            vehiclesRecyclerView.layoutManager = layoutManager
 
             adapter = AdapterRecycler()
-            vehiclesRecycllerView.adapter = adapter
+            vehiclesRecyclerView.adapter = adapter
         }
 
 

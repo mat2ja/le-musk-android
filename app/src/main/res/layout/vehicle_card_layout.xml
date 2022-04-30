@@ -28,7 +28,7 @@
             android:layout_height="39dp"
             android:layout_marginStart="24dp"
             android:textColor="#424242"
-            android:textSize="24dp"
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/vehicle_image"
             app:layout_constraintTop_toTopOf="parent" />
