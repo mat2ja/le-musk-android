@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ListaOsrecki</string>
+    <string name="share">Share</string>
+    <string name="yes">Yup</string>
+    <string name="no">Nope</string>
+    <string name="share_dialog_content">Do you really want to share content?</string>
 </resources>
