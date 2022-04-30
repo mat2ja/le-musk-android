@@ -4,36 +4,45 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.tvz.hr.listaosrecki.broadcast.LowBatteryReceiver
+import android.tvz.hr.listaosrecki.databinding.ActivityMainBinding
 import android.tvz.hr.listaosrecki.parceable.VehicleObject
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var binding: ActivityMainBinding
 
-    private var selectedVehicle: VehicleObject? =
-        null
+
+    private var layoutManager: RecyclerView.LayoutManager? = null
+    private var adapter: RecyclerView.Adapter<*>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
         registerReceivers();
+
+        binding.apply {
+
+            layoutManager = LinearLayoutManager(applicationContext)
+
+            vehiclesRecycllerView.layoutManager = layoutManager
+
+            adapter = AdapterRecycler()
+            vehiclesRecycllerView.adapter = adapter
+        }
+
+
     }
-
-
-    fun goToVehicle(view: android.view.View) {
-        val intent = Intent(applicationContext, VehicleDetailsActivity::class.java)
-
-        selectedVehicle = VehicleObject("Tesla Model S Plaid", 2021, 95000.00, 1.99, 500);
-        intent.putExtra("vehicle", selectedVehicle)
-
-        startActivity(intent)
-    }
-
 
     private fun registerReceivers() {
         val intentFilter = IntentFilter()
