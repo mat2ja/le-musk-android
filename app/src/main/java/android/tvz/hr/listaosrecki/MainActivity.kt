@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private var selectedVehicle: VehicleObject? =
-        VehicleObject("Tesla Model S Plaid", 2021, 95000.00, 1.99, 500);
+        null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,10 @@ class MainActivity : AppCompatActivity() {
 
     fun goToVehicle(view: android.view.View) {
         val intent = Intent(applicationContext, VehicleDetailsActivity::class.java)
+
+        selectedVehicle = VehicleObject("Tesla Model S Plaid", 2021, 95000.00, 1.99, 500);
         intent.putExtra("vehicle", selectedVehicle)
+
         startActivity(intent)
     }
 
