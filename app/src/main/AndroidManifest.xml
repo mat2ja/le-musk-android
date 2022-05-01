@@ -21,6 +21,9 @@
         <activity
             android:name=".VehicleDetailsActivity"
             android:exported="true" />
+        <activity
+            android:name=".VehicleImageActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

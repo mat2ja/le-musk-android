@@ -52,39 +52,4 @@ class MainActivity : AppCompatActivity() {
 
         registerReceiver(lbReceiver, intentFilter)
     }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.activity_menu, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.menu_share -> {
-                startShareAlert()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
-
-    private fun startShareAlert() {
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle(R.string.share)
-        builder.setMessage(R.string.share_dialog_content)
-            .setPositiveButton(R.string.yes) { dialog, which -> sendShareBroadcast(); }
-            .setNegativeButton(R.string.no) { dialog, which -> dialog.cancel() }
-            .create()
-            .show()
-
-    }
-
-    private fun sendShareBroadcast() {
-        val broadcastShare = Intent()
-        broadcastShare.action = "hr.android.tvz.listaosrecki.SHARE"
-        sendBroadcast(broadcastShare)
-        Toast.makeText(this, "Share broadcast sent", Toast.LENGTH_SHORT).show()
-    }
-
-
 }

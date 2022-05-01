@@ -5,4 +5,12 @@
     <string name="yes">Da</string>
     <string name="no">Ne</string>
     <string name="share_dialog_content">Želite li podijeliti sadržaj?</string>
+    <string name="range">DOSEG</string>
+    <string name="acceleration">UBRZANJE</string>
+    <string name="price">CIJENA</string>
+    <string name="year">GODINA</string>
+    <string name="buy_now">Kupi odmah</string>
+    <string name="website_intent_error">Nemoguće otvoriti preglednik</string>
+    <string name="low_battery_message">Niska baterija, molimo napunite!</string>
+    <string name="share_broadcast_msg">Share broadcast poslan</string>
 </resources>

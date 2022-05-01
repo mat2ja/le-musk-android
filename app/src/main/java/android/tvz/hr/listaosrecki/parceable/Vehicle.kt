@@ -10,4 +10,5 @@ class Vehicle(
     val price: Double,
     val acceleration: Double,
     val range: Int,
+    val image: Int
 ) : Parcelable {}

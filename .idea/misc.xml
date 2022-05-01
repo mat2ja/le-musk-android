@@ -5,7 +5,8 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26570415400202635" />
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.2725430597771023" />
-        <entry key="app/src/main/res/layout/activity_vehicle_details.xml" value="0.2725430597771023" />
+        <entry key="app/src/main/res/layout/activity_vehicle_details.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_vehicle_image.xml" value="0.1" />
         <entry key="app/src/main/res/layout/layout_vehicle_card.xml" value="0.2725430597771023" />
         <entry key="app/src/main/res/layout/menu.xml" value="0.2725430597771023" />
         <entry key="app/src/main/res/layout/vehicle_card_layout.xml" value="0.2725430597771023" />

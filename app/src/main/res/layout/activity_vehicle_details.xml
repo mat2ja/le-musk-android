@@ -7,47 +7,97 @@
     android:layout_height="match_parent"
     android:padding="24dp">
 
+
     <ImageView
         android:id="@+id/vehicle_details_image"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
+        android:onClick="openImage"
+        android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tesla_s" />
-
-    <TextView
-        android:id="@+id/vehicle_details_name"
-        style="@style/VehicleDetailsName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:srcCompat="@drawable/tesla_s"
+        tools:ignore="UsingOnClickInXml" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vehicle_details_name">
+        app:layout_constraintTop_toBottomOf="@+id/vehicle_details_image">
 
         <TextView
-            android:id="@+id/vehicle_year"
-            style="@style/VehicleStat" />
+            android:id="@+id/vehicle_details_name"
+            style="@style/VehicleDetailsName" />
 
-        <TextView
-            android:id="@+id/vehicle_price"
-            style="@style/VehicleStat"
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
 
-            />
+            <TableRow style="@style/VehicleStatRow">
 
-        <TextView
-            android:id="@+id/vehicle_acceleration"
-            style="@style/VehicleStat" />
+                <TextView
+                    android:id="@+id/year_label"
+                    style="@style/VehicleStatLabel"
+                    android:text="@string/year" />
 
-        <TextView
-            android:id="@+id/vehicle_range"
-            style="@style/VehicleStat" />
+                <TextView
+                    android:id="@+id/vehicle_year"
+                    style="@style/VehicleStat" />
+
+            </TableRow>
+
+            <TableRow style="@style/VehicleStatRow">
+
+                <TextView
+                    android:id="@+id/price_label"
+                    style="@style/VehicleStatLabel"
+                    android:text="@string/price" />
+
+                <TextView
+                    android:id="@+id/vehicle_price"
+                    style="@style/VehicleStat" />
+            </TableRow>
+
+            <TableRow style="@style/VehicleStatRow">
+
+                <TextView
+                    android:id="@+id/acceleration_label"
+                    style="@style/VehicleStatLabel"
+                    android:layout_width="150dp"
+                    android:text="@string/acceleration" />
+
+                <TextView
+                    android:id="@+id/vehicle_acceleration"
+                    style="@style/VehicleStat" />
+            </TableRow>
+
+            <TableRow style="@style/VehicleStatRow">
+
+                <TextView
+                    android:id="@+id/range_label"
+                    style="@style/VehicleStatLabel"
+                    android:text="@string/range" />
+
+
+                <TextView
+                    android:id="@+id/vehicle_range"
+                    style="@style/VehicleStat" />
+            </TableRow>
+        </TableLayout>
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openWebsite"
+        android:text="@string/buy_now"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

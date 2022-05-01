@@ -4,4 +4,12 @@
     <string name="yes">Yup</string>
     <string name="no">Nope</string>
     <string name="share_dialog_content">Do you really want to share content?</string>
+    <string name="year">YEAR</string>
+    <string name="price">PRICE</string>
+    <string name="acceleration">ACCELERATION</string>
+    <string name="range">RANGE</string>
+    <string name="buy_now">Buy now</string>
+    <string name="website_intent_error">Not possible to open browser</string>
+    <string name="low_battery_message">Low battery, please charge!</string>
+    <string name="share_broadcast_msg">Share broadcast sent</string>
 </resources>
