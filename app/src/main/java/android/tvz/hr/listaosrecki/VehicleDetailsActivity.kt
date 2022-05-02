@@ -25,15 +25,23 @@ class VehicleDetailsActivity : AppCompatActivity() {
         binding = ActivityVehicleDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        vehicle = intent.extras!!.getParcelable("vehicle")
-        if (vehicle != null) {
-            binding.apply {
+        binding.apply {
+            vehicle = intent.extras!!.getParcelable("vehicle")
+            if (vehicle != null) {
                 vehicleDetailsImage.setImageResource(vehicle!!.image)
                 vehicleDetailsName.text = vehicle!!.name
                 vehicleYear.text = vehicle!!.year.toString()
                 vehiclePrice.text = formatPrice(vehicle!!.price)
                 vehicleAcceleration.text = formatAcceleration(vehicle!!.acceleration)
                 vehicleRange.text = formatRange(vehicle!!.range)
+            }
+
+            vehicleDetailsImage.setOnLongClickListener() {
+                vehicleDetailsImage.animate().apply {
+                    duration = 1000
+                    rotationXBy(360f)
+                }.start()
+                true
             }
         }
 
