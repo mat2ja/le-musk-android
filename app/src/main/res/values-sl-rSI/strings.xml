@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ListaOsrecki</string>
     <string name="share">deli</string>
     <string name="yes">da</string>
     <string name="no">št</string>

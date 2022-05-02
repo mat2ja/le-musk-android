@@ -32,12 +32,15 @@
             android:id="@+id/vehicle_details_name"
             style="@style/VehicleDetailsName" />
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
 
-            <TableRow style="@style/VehicleStatRow">
+            <LinearLayout
+                style="@style/VehicleStatRow"
+                android:layout_marginTop="0dp">
 
                 <TextView
                     android:id="@+id/year_label"
@@ -48,9 +51,11 @@
                     android:id="@+id/vehicle_year"
                     style="@style/VehicleStat" />
 
-            </TableRow>
+            </LinearLayout>
 
-            <TableRow style="@style/VehicleStatRow">
+
+            <LinearLayout style="@style/VehicleStatRow">
+
 
                 <TextView
                     android:id="@+id/price_label"
@@ -60,9 +65,10 @@
                 <TextView
                     android:id="@+id/vehicle_price"
                     style="@style/VehicleStat" />
-            </TableRow>
+            </LinearLayout>
 
-            <TableRow style="@style/VehicleStatRow">
+
+            <LinearLayout style="@style/VehicleStatRow">
 
                 <TextView
                     android:id="@+id/acceleration_label"
@@ -73,9 +79,10 @@
                 <TextView
                     android:id="@+id/vehicle_acceleration"
                     style="@style/VehicleStat" />
-            </TableRow>
+            </LinearLayout>
 
-            <TableRow style="@style/VehicleStatRow">
+
+            <LinearLayout style="@style/VehicleStatRow">
 
                 <TextView
                     android:id="@+id/range_label"
@@ -86,8 +93,8 @@
                 <TextView
                     android:id="@+id/vehicle_range"
                     style="@style/VehicleStat" />
-            </TableRow>
-        </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

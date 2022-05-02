@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ListaOsrecki</string>
+    <string name="app_name" translatable="false">Le musk</string>
     <string name="share">Share</string>
     <string name="yes">Yup</string>
     <string name="no">Nope</string>
