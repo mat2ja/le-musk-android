@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ListaOsrecki</string>
+    <string name="share">deli</string>
+    <string name="yes">da</string>
+    <string name="no">št</string>
+    <string name="share_dialog_content">Ali res želite deliti vsebino?</string>
+    <string name="year">LETO</string>
+    <string name="price">CENA</string>
+    <string name="acceleration">POSPEŠEK</string>
+    <string name="range">DOMET</string>
+    <string name="buy_now">Kupi zdaj</string>
+    <string name="website_intent_error">Brskalnika ni mogoče odpreti</string>
+    <string name="low_battery_message">Nizka baterija, napolnite!</string>
+    <string name="share_broadcast_msg">Delite oddajo poslano</string>
+</resources>

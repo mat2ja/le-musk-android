@@ -4,12 +4,10 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.tvz.hr.listaosrecki.databinding.ActivityMainBinding
+import android.tvz.hr.listaosrecki.databinding.ActivityVehicleDetailsBinding
 import android.tvz.hr.listaosrecki.parceable.Vehicle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -17,27 +15,26 @@ import java.text.DecimalFormat
 
 class VehicleDetailsActivity : AppCompatActivity() {
 
-    // TODO: view binding
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityVehicleDetailsBinding
 
     var vehicle: Vehicle? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_vehicle_details)
+        binding = ActivityVehicleDetailsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         vehicle = intent.extras!!.getParcelable("vehicle")
         if (vehicle != null) {
-            findViewById<ImageView>(R.id.vehicle_details_image).setImageResource(vehicle!!.image)
-            findViewById<TextView>(R.id.vehicle_details_name).text = vehicle!!.name
-            findViewById<TextView>(R.id.vehicle_year).text = vehicle!!.year.toString()
-            findViewById<TextView>(R.id.vehicle_price).text = formatPrice(vehicle!!.price)
-            findViewById<TextView>(R.id.vehicle_acceleration).text =
-                formatAcceleration(vehicle!!.acceleration)
-            findViewById<TextView>(R.id.vehicle_range).text = formatRange(vehicle!!.range)
-
+            binding.apply {
+                vehicleDetailsImage.setImageResource(vehicle!!.image)
+                vehicleDetailsName.text = vehicle!!.name
+                vehicleYear.text = vehicle!!.year.toString()
+                vehiclePrice.text = formatPrice(vehicle!!.price)
+                vehicleAcceleration.text = formatAcceleration(vehicle!!.acceleration)
+                vehicleRange.text = formatRange(vehicle!!.range)
+            }
         }
 
     }

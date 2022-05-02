@@ -1,20 +1,24 @@
 package android.tvz.hr.listaosrecki
 
 import android.os.Bundle
-import android.tvz.hr.listaosrecki.parceable.Vehicle
-import android.widget.ImageView
-import android.widget.TextView
+import android.tvz.hr.listaosrecki.databinding.ActivityVehicleImageBinding
 import androidx.appcompat.app.AppCompatActivity
 
 class VehicleImageActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityVehicleImageBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_vehicle_image)
+
+        binding = ActivityVehicleImageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val vehicleImage: Int? = intent.getIntExtra("vehicleImage", 0)
         if (vehicleImage != null) {
-            findViewById<ImageView>(R.id.vehicle_image_large).setImageResource(vehicleImage)
+            binding.apply {
+                vehicleImageLarge.setImageResource(vehicleImage)
+            }
         }
     }
 

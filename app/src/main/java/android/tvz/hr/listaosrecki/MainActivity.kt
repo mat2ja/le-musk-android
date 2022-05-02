@@ -5,10 +5,6 @@ import android.content.IntentFilter
 import android.os.Bundle
 import android.tvz.hr.listaosrecki.broadcast.LowBatteryReceiver
 import android.tvz.hr.listaosrecki.databinding.ActivityMainBinding
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
-
 
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapter: RecyclerView.Adapter<*>? = null
@@ -31,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         registerReceivers();
 
         binding.apply {
-
             layoutManager = LinearLayoutManager(applicationContext)
 
             vehiclesRecyclerView.layoutManager = layoutManager
@@ -39,8 +33,6 @@ class MainActivity : AppCompatActivity() {
             adapter = AdapterRecycler()
             vehiclesRecyclerView.adapter = adapter
         }
-
-
     }
 
     private fun registerReceivers() {

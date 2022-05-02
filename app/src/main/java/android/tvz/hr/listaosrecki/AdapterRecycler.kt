@@ -30,7 +30,6 @@ class AdapterRecycler : RecyclerView.Adapter<AdapterRecycler.ViewHolder>() {
         ),
     )
 
-
     private var image = R.drawable.electric_car;
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
